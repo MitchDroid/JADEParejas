@@ -24,6 +24,7 @@ public class MostrarMatriz extends JFrame implements Runnable, ActionListener {
     Thread hilo;
     boolean cronometroActivo;
     public static int onoff = 0;
+    private int d;
 
     private ControladorConeccion controladorConeccion;
     private Connection coneccion = null;
@@ -44,7 +45,7 @@ public class MostrarMatriz extends JFrame implements Runnable, ActionListener {
     }
 
     public MostrarMatriz(final int tam, final String nombre) {
-          try {
+        try {
 
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
         } catch (ClassNotFoundException ex) {
@@ -57,7 +58,6 @@ public class MostrarMatriz extends JFrame implements Runnable, ActionListener {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MostrarMatriz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        
 
         this.nombre = nombre;
         this.tamano = tam;
@@ -65,10 +65,10 @@ public class MostrarMatriz extends JFrame implements Runnable, ActionListener {
         t = new Matriz(tamano);
         t.genAleatorio();
         initComponents();
-        configVentana();
+        configurarPanel();
     }
 
-    public void configVentana() {
+    public void configurarPanel() {
         setTitle("JADE Parejas| Julian");
         setSize(450, 500);
         setResizable(false);
@@ -107,9 +107,10 @@ public class MostrarMatriz extends JFrame implements Runnable, ActionListener {
             }
         });
 
-        int d = t.getDim();
+        d = t.getDim();
         imagenes = new ImageIcon[d * d / 2 + 1];
         imagenes[0] = null;
+        //ruta de las imagenes
         for (int i = 1; i <= d * d / 2; i++) {
             imagenes[i] = new ImageIcon(getClass().getResource("/jadeparejas/res/" + i + ".jpg"));
         }
@@ -183,14 +184,21 @@ public class MostrarMatriz extends JFrame implements Runnable, ActionListener {
                             onoff = 0;
                             pararCronometro();
                         }
-                        JOptionPane.showMessageDialog(this, "Felicidades " + nombre + ", intentalo hacerlo en un menor tiempo.", "Al fin terminaste!", JOptionPane.INFORMATION_MESSAGE, null);
+                        JOptionPane.showMessageDialog(this, "Felicidades " + nombre
+                                + ", ahora intenta mejorar y hacerlo en el menor tiempo posible.",
+                                "Bien Hecho!!", JOptionPane.INFORMATION_MESSAGE, null);
+                        botones[a][b].setIcon(null);
+                        botones[ii][jj].setIcon(null);                        
                         mostrarResultados();
+                        
                     }
                     return;
                 }
             }
         }
     }
+    
+ 
 
     private String obtenerTipoDeMatriz() {
         String tipoMatriz = "";
@@ -217,6 +225,14 @@ public class MostrarMatriz extends JFrame implements Runnable, ActionListener {
         iniciarAgenteResultadosRecords(null);
     }
 
+    /**
+     * Método que guarda en un String array los datos obtenidos y notifica al
+     * agente para iniciar el juego
+     *
+     * @param record tiempo / resultado de la partida
+     *
+     *
+     */
     public void guardarRecords(JLabel record) {
         System.out.println(record.getText());
         String[] params = new String[3];

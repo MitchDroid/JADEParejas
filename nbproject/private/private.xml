@@ -4,10 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Projects/Universidad/Parejas/JADEParejas/src/jadeparejas/MostrarMatriz.java</file>
-            <file>file:/C:/Projects/Universidad/Parejas/JADEParejas/src/basedatos/ConnectionHandler.java</file>
-            <file>file:/C:/Projects/Universidad/Parejas/JADEParejas/src/jadeparejas/Cronometro.java</file>
+            <file>file:/C:/Projects/Universidad/Parejas/JADEParejas/src/agentes/AgenteMostrarRecords.java</file>
+            <file>file:/C:/Projects/Universidad/Parejas/JADEParejas/src/controladores/ControladorBaseDatos.java</file>
+            <file>file:/C:/Projects/Universidad/Parejas/JADEParejas/src/jadeparejas/ResultadosRecords.java</file>
             <file>file:/C:/Projects/Universidad/Parejas/JADEParejas/src/jadeparejas/SeleccionarTamañoMatriz.java</file>
-            <file>file:/C:/Projects/Universidad/Parejas/JADEParejas/src/jadeparejas/Matriz.java</file>
         </group>
     </open-files>
 </project-private>

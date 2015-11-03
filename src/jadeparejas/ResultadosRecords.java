@@ -45,7 +45,7 @@ public class ResultadosRecords extends javax.swing.JFrame {
 
         controladorBD = ControladorBaseDatos.getInstance();
 
-        //create header for the table
+        //crear header para la tabla
         header = new Vector<String>();
         header.add("Nombre");
         header.add("Record");

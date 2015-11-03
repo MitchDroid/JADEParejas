@@ -36,7 +36,7 @@ public class ControladorBaseDatos {
     }
 
     /**
-     * Método para recuperar el la lista de los records.
+     * Método para recuperar  la lista de los records.
      *
      * @return Vector con la lista Formateada
      */
@@ -74,7 +74,7 @@ public class ControladorBaseDatos {
     /**
      * Método para insertar nuevos registros de los records en la base de datos.
      *
-     * @return 1 si el registro fué insertado correctamente
+     * @return 1 si el registro fue insertado correctamente
      */
     public int insertarRegistroQuery(final String record, final String nombre, final String tipoMatriz) {
 
