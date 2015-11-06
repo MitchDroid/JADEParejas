@@ -69,7 +69,7 @@ public class MostrarMatriz extends JFrame implements Runnable, ActionListener {
     }
 
     public void configurarPanel() {
-        setTitle("JADE Parejas| Julian");
+        setTitle("JADE Parejas| Julian y Diego");
         setSize(450, 500);
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -187,8 +187,7 @@ public class MostrarMatriz extends JFrame implements Runnable, ActionListener {
                         JOptionPane.showMessageDialog(this, "Felicidades " + nombre
                                 + ", ahora intenta mejorar y hacerlo en el menor tiempo posible.",
                                 "Bien Hecho!!", JOptionPane.INFORMATION_MESSAGE, null);
-                        botones[a][b].setIcon(null);
-                        botones[ii][jj].setIcon(null);                        
+                                              
                         mostrarResultados();
                         
                     }

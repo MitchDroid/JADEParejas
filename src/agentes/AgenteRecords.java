@@ -23,7 +23,7 @@ public class AgenteRecords extends Agent {
 
     @Override
     protected void setup() {
-        System.out.println("Hola soy el agente Encargado de guardar los Records ");
+        System.out.println("Hola soy el agente Encargado de guardar los Records en la Base de Datos ");
         System.out.println("Mi nombre es " + getLocalName());
 
         controladorBD = ControladorBaseDatos.getInstance();

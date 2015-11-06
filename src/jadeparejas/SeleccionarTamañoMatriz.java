@@ -150,13 +150,7 @@ public class SeleccionarTamañoMatriz extends javax.swing.JFrame {
                 break;
             case 2:
                 tamaño = 6;
-                break;
-            case 3:
-                tamaño = 8;
-                break;
-            case 4:
-                tamaño = 10;
-                break;
+                break;           
             default:
                 tamaño = 4;
 
